@@ -21,8 +21,10 @@ const areaSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    createdAt: {
-        type: Date,
-        
-    }
+},{
+    timestamps: true,
 })
+
+const areaModel = mongoose.model("area", areaSchema);
+
+module.exports = areaModel;
